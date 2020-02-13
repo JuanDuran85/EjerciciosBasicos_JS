@@ -10,7 +10,7 @@
     <!-- Ejercicio Básico - 4 -->
     <main class="contenedor">
         <h1>Ingresando datos</h1>
-        <form onsubmit="return validarFormaulario()" class="formulario">
+        <form onsubmit="validarFormaulario()" class="formulario">
             <label for="nombre">Ingrese el Primer Nombre:</label>
             <input type="text" name="nombre" id="nombre" placeholder="Primer nombre" required minlength="2" maxlength="15">
             <label for="apellido">Ingrese el Primer Apellido</label>
@@ -18,10 +18,13 @@
             <label for="correo">Ingrese el Correo Electrónico</label>
             <input type="email" name="correo" id="correo" required placeholder="Ingrese el correo Electrónico" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
             <label for="edad">Ingrese la edad</label>
-            <input type="number" name="edad" id="edad" required placeholder="Ingrese la edad" pattern="">
+            <input type="number" name="edad" id="edad" required placeholder="Ingrese la edad" minlength="1" maxlength="2">
             <input type="submit" value="Enviar" class="enviar" id="enviar">
         </form>
     </main>
+    <section id="mostrar">
+
+    </section>
     <script src="js/script5.js"></script>
 </body>
 </html>
