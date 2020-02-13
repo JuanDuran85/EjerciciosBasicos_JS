@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <!-- Ejercicio Básico - 4 -->
+    <main class="contenedor">
+        <h1>Ingresando datos</h1>
+        <form onsubmit="return validateForm()" class="formulario">
+            <label for="nombre">Ingrese el Primer Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Primer nombre" required minlength="2" maxlength="15">
+            <label for="apellido">Ingrese el Primer Apellido</label>
+            <input type="text" name="apellido" id="apellido" required placeholder="Primer apellido" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,15}">
+            <label for="correo">Ingrese el Correo Electrónico</label>
+            <input type="email" name="correo" id="correo" required placeholder="Ingrese el correo Electrónico" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+            <label for="edad">Ingrese la edad</label>
+            <input type="number" name="edad" id="edad" required placeholder="Ingrese la edad" pattern="">
+            <input type="submit" value="Enviar" class="enviar" id="enviar">
+        </form>
+    </main>
+    <script src="js/script4.js"></script>
+</body>
+</html>

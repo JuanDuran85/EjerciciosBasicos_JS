@@ -77,6 +77,6 @@ document.write("--------------------------------------- <br>");
 //funcion
 
 function saludos(valor) {
-    var numer34 = numer34 + 5;
+    var vnumer34 = numer34 + 5;
     alert("Saludando desde función: "+numer34);
 }

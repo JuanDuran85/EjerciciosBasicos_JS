@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contenedor {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    background-color: rgb(154, 163, 226);
+    margin-top: 20px;
+    flex-direction: column;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    margin: auto;
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.enviar {
+    &:hover {
+        background-color: mediumspringgreen;
+    }
+}
