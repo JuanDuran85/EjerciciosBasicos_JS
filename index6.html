@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <!-- Ejercicio Básico - 4 -->
+        <form id="formulario" class="formulario">
+            <table>
+                <tr>
+                    <td colspan="2">Datos de Participante</td>                              
+                </tr> 
+                <tr>
+                    <td>Nombres</td>    
+                    <td><input tabindex="1" type="text" name="Nombres" placeholder="Ingrese Nombre" autofocus="autofocus" required="required" maxlength="20" pattern="[A-Za-z]{3,9}"/></td>                    
+                </tr>    
+                <tr>
+                    <td>Apellidos</td>    
+                    <td><input tabindex="2" type="text" name="Apellidos" placeholder="Ingrese Apellido" autofocus="autofocus" required="required" maxlength="20" pattern="[A-Za-z]{3,9}"/></td>                    
+                </tr>  
+                <tr>
+                    <td>Cédula</td>    
+                    <td>
+                        <input tabindex="3" type="radio" name="id" value="venezolano" required /><strong>V</strong>
+                        <input type="radio" name="id" value="extranjero" required /><strong>E</strong>
+                        <input tabindex="4" type="text" name="cedula" placeholder="Ingrse su Cédula" autofocus="autofocus" required="required" maxlength="9" pattern="[0-9]{6,8}"/>  
+                    </td>                    
+                </tr>  
+                <tr>
+                    <td>Dirección</td>    
+                    <td><textarea tabindex="4" col="3" rows="3" type="text" name="direccion" size="40" placeholder="Dirección" autofocus="autofocus" required="required"></textarea></td>                    
+                 </tr>  
+                <tr>
+                    <td colspan="2"><input type="submit" name="resgistrar" value="Registrar" id="boton" /></td>                  
+                </tr>                
+            </table>
+        </form>
+    <section id="mostrar">
+
+    </section>
+    <script src="js/script5.js"></script>
+</body>
+</html>
