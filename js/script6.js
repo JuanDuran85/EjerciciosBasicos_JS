@@ -18,6 +18,12 @@
             i++;
         }
 
+        if (formulario.id[0].checked == true || formulario.id[1].checked == true) {
+        }else {
+            alert("Debe seleccionar una opción entre Chileno y Extranjero");
+            e.preventDefault();
+        }
+
         if (i  > 0) {
             i=0;
             alert("No se puede enviar el Formulario");
