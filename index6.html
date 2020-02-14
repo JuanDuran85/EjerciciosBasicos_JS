@@ -8,25 +8,25 @@
 </head>
 <body>
     <!-- Ejercicio Básico - 4 -->
-        <form id="formulario" class="formulario">
+        <form id="formulario" class="formulario" action="#" method="get">
             <table>
                 <tr>
                     <td colspan="2">Datos de Participante</td>                              
                 </tr> 
                 <tr>
                     <td>Nombres</td>    
-                    <td><input tabindex="1" type="text" name="Nombres" placeholder="Ingrese Nombre" autofocus="autofocus" required="required" maxlength="20" pattern="[A-Za-z]{3,9}"/></td>                    
+                    <td><input tabindex="1" type="text" name="nombre" placeholder="Ingrese Nombre" autofocus="autofocus" required="required" maxlength="20" pattern="[A-Za-z]{3,9}"/></td>                    
                 </tr>    
                 <tr>
                     <td>Apellidos</td>    
-                    <td><input tabindex="2" type="text" name="Apellidos" placeholder="Ingrese Apellido" autofocus="autofocus" required="required" maxlength="20" pattern="[A-Za-z]{3,9}"/></td>                    
+                    <td><input tabindex="2" type="text" name="apellido" placeholder="Ingrese Apellido" autofocus="autofocus" required="required" maxlength="20" pattern="[A-Za-z]{3,9}"/></td>                    
                 </tr>  
                 <tr>
-                    <td>Cédula</td>    
+                    <td>RUT</td>    
                     <td>
-                        <input tabindex="3" type="radio" name="id" value="venezolano" required /><strong>V</strong>
+                        <input tabindex="3" type="radio" name="id" value="chileno" required /><strong>C</strong>
                         <input type="radio" name="id" value="extranjero" required /><strong>E</strong>
-                        <input tabindex="4" type="text" name="cedula" placeholder="Ingrse su Cédula" autofocus="autofocus" required="required" maxlength="9" pattern="[0-9]{6,8}"/>  
+                        <input tabindex="4" type="text" name="rut" placeholder="Ingrse su RUT con solo numeros" autofocus="autofocus" required="required" maxlength="9" pattern="[0-9]{6,8}"/>  
                     </td>                    
                 </tr>  
                 <tr>
@@ -41,6 +41,6 @@
     <section id="mostrar">
 
     </section>
-    <script src="js/script5.js"></script>
+    <script src="js/script6.js"></script>
 </body>
 </html>
