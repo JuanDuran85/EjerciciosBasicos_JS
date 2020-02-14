@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Ejercicio 5</title>
+    <title>Ejercicio 6</title>
 </head>
 <body>
     <!-- Ejercicio Básico - 4 -->
@@ -26,16 +26,23 @@
                     <td>
                         <input tabindex="3" type="radio" name="id" value="chileno" required /><strong>C</strong>
                         <input type="radio" name="id" value="extranjero" required /><strong>E</strong>
-                        <input tabindex="4" type="text" name="rut" placeholder="Ingrse su RUT con solo numeros" autofocus="autofocus" required="required" maxlength="9" pattern="[0-9]{6,8}"/>  
+                        <input tabindex="4" type="text" name="rut" placeholder="Ingrse su RUT con solo numeros" autofocus="autofocus" required="required" maxlength="9" pattern="[0-9]{6,8}" class="rut"/>  
                     </td>                    
                 </tr>  
                 <tr>
                     <td>Dirección</td>    
                     <td><textarea tabindex="4" col="3" rows="3" type="text" name="direccion" size="40" placeholder="Dirección" autofocus="autofocus" required="required"></textarea></td>                    
                  </tr>  
+                 <tr>
+                    <td>Correo Eléctronico</td>
+                    <td><input type="email" id="correo" name="correo"></td>
+                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" name="resgistrar" value="Registrar" id="boton" /></td>                  
-                </tr>                
+                    <td colspan="2"><input type="submit" name="resgistrar" value="Registrar" id="boton" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="reset" value="Reiniciar" /></td>
+                </tr>  
             </table>
         </form>
     <section id="mostrar">

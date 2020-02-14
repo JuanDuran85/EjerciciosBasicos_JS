@@ -31,7 +31,7 @@ h1 {
     padding-bottom: 20px;
 }
 
-input[type=text], input[type=email], input[type=number], input[type=submit] {
+input[type=text], input[type=email], input[type=number], input[type=submit], input[type=reset] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -40,5 +40,27 @@ input[type=text], input[type=email], input[type=number], input[type=submit] {
 .enviar {
     &:hover {
         background-color: mediumspringgreen;
+    }
+}
+
+input[type=text], input[type=email] {
+
+    &:invalid {
+        border: 2px dashed red;
+        background-color: rgba(233, 123,10, 0.5);
+    }    
+    
+    &:valid {
+        border: 2px solid black;
+        background-color: rgba(89, 240, 109, 0.3);
+    }
+}
+
+.rut {
+    &:invalid {
+        border: 2px dashed red;
+        &:required {
+            background-image: linear-gradient(to right, pink, lightgreen);
+        }
     }
 }
