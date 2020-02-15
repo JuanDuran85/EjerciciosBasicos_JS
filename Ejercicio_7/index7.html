@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <title>Formulario Básico HTML - JS</title>
 </head>
 <body>
     <h1>Formulario de Registro</h1>
-    <form action="#" method="post" class="formulario_registro" onsubmit="return validando();">
+    <form onsubmit="return validando();" class="formulario_registro" method="POST">
         <h2 class="titulo_h1">CREA UNA CUENTA</h2>
-        <div class="contenedorInputs">
-            <input type="text" class="input_nombre" name="nombre" id="nombre" placeholder="Ingrese el Nombre" required autofocus>
-            <input type="text" class="input_apellido" name="apellido" id="apellido" placeholder="Ingrese el Apellido" required autofocus>
-            <input type="email" class="input_correo" name="correo" id="correo" placeholder="Ingrese el Correo Eléctronico" required autofocus>
-            <input type="text" class="input_usuario" name="usuario" id="usuario" placeholder="Ingrese el Usuario" required autofocus>
-            <input type="password" class="input_clave" name="clave" id="clave" placeholder="Ingrese Clave de Usuario" required autofocus>
-            <input type="text" class="input_telefono" name="telefono" id="telefono" placeholder="Ingrese el Número Telefónico" required autofocus>
-            <input type="submit" class="input_enviar" id="enviar" value="Registrar">
-            <p class="info">¿Tienes una cuenta? <a href="#">Ingresa a aquì</a></p>
-        </div>
+        <section class="contenedorInputs">
+            <input type="text" class="input_nombre" name="nombre" id="nombre" placeholder="Ingrese el Nombre">
+            <input type="text" class="input_apellido" name="apellido" id="apellido" placeholder="Ingrese el Apellido">
+            <input type="email" class="input_correo" name="correo" id="correo" placeholder="Ingrese el Correo Eléctronico">
+            <input type="text" class="input_usuario" name="usuario" id="usuario" placeholder="Ingrese el Usuario">
+            <input type="password" class="input_clave" name="clave" id="clave" placeholder="Ingrese Clave de Usuario">
+            <input type="text" class="input_telefono" name="telefono" id="telefono" placeholder="Ingrese el Número Telefónico">
+            <input type="submit" class="input_enviar" value="Registrar">
+            <p class="info">¿Tienes una cuenta?<a href="#">Ingresa a aquì</a></p>
+        </section>
     </form>
     <script src="js/script7.js"></script>
 </body>
