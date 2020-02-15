@@ -11,4 +11,10 @@ form {
   padding: 1em;
   background-color: #f5ecde; }
 
+input[type="text"] {
+  -webkit-transition: background-color .6s ease-in-out;
+  transition: background-color .6s ease-in-out; }
+  input[type="text"]:focus {
+    background-color: #effffa; }
+
 /*# sourceMappingURL=main.css.map */
