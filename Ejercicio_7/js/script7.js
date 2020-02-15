@@ -8,6 +8,8 @@ function validando() {
     clave = document.getElementById("clave").value;
     telefono = document.getElementById("telefono").value;
 
+    const expresion = /\w+@\w+\.+[a-z]/;
+
     if (nombre === "" || apellido === "" || correo === "" || usuario === "" || clave === "" || telefono === "") {
         Swal.fire({
             icon: 'error',
@@ -40,6 +42,14 @@ function validando() {
             footer: 'El máximo permitido es de 100 caracteres de largo'
           });
           return false;
+    } else if (!expresion.test(correo)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes ingresar un correo electrónico valido',
+            footer: 'El correo elctrónico no es valido'
+          });
+          return false;
     } else if (usuario.length > 20 || clave.length > 20 ) {
         Swal.fire({
             icon: 'error',
@@ -48,7 +58,7 @@ function validando() {
             footer: 'El máximo permitido es de 20 caracteres de largo para ambos parametros'
           });
           return false;
-    } else if (telefono.length > 11) {
+    } else if (telefono.length > 11 || isNaN(telefono)) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
