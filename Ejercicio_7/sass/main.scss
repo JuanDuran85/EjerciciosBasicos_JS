@@ -20,6 +20,7 @@ h1 {
     margin: auto;
     background-color: whitesmoke;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 .titulo_h1 {
@@ -62,11 +63,16 @@ input {
     padding: 10px 30px;
     background: coral;
     color: white;
-    transition: background 1s ease-in-out;
+    transition: background 0.7s ease-in-out;
 
     &:hover {
         background: chocolate;
         border: 2px solid black;
+    }
+
+    &:active {
+        transform: scale(1.09);
+        background: darkgoldenrod;
     }
 }
 

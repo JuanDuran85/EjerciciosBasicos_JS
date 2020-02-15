@@ -17,7 +17,8 @@ h1 {
   max-width: 500px;
   margin: auto;
   background-color: whitesmoke;
-  border-radius: 7px; }
+  border-radius: 7px;
+  cursor: pointer; }
 
 .titulo_h1 {
   background-color: darkturquoise;
@@ -59,11 +60,15 @@ input {
   padding: 10px 30px;
   background: coral;
   color: white;
-  -webkit-transition: background 1s ease-in-out;
-  transition: background 1s ease-in-out; }
+  -webkit-transition: background 0.7s ease-in-out;
+  transition: background 0.7s ease-in-out; }
   .input_enviar:hover {
     background: chocolate;
     border: 2px solid black; }
+  .input_enviar:active {
+    -webkit-transform: scale(1.09);
+            transform: scale(1.09);
+    background: darkgoldenrod; }
 
 .info {
   width: 100%;
