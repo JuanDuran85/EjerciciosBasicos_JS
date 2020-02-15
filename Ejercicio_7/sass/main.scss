@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #6b66b1;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+.formulario_registro {
+    width: 98%;
+    max-width: 500px;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+
+.titulo_h1 {
+    background-color: darkturquoise;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 5px solid #912d67;
+}
+
+.contenedorInputs {
+    padding: 10px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input {
+ margin-bottom: 15px;
+ padding: 15px; 
+ font-size: 16px;
+ border-radius: 3.5px;
+ border: 1px solid #16151f;
+}
+
+.input_nombre, .input_apellido, .input_usuario, .input_clave {
+    width: 48%;
+}
+
+.input_correo, .input_telefono {
+    width: 100%;
+}
+
+.input_enviar {
+    margin: auto;
+    padding: 10px 30px;
+    background: coral;
+    color: white;
+    transition: background 1s ease-in-out;
+
+    &:hover {
+        background: chocolate;
+        border: 2px solid black;
+    }
+}
+
+.info {
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
