@@ -3,19 +3,41 @@ function validar() {
     var expresionNombre = /^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$/;
     var expresionCorreo = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-    var inputEmail4, inputPassword4, inputAddress, inputCity, inputState, gridCheck, exampleFormControlTextarea1, formulario;
+    var inputEmail4, inputPassword4, inputAddress, inputCity, inputState, gridCheck, exampleFormControlTextarea1, formulario, inputZip;
 
     inputEmail4 = document.getElementById("inputEmail4");
     inputPassword4 = document.getElementById("inputPassword4");
     inputAddress = document.getElementById("inputAddress");
     inputCity = document.getElementById("inputCity");
     inputState = document.getElementById("inputState");
+    inputZip = document.getElementById("inputZip");
     gridCheck = document.getElementById("gridCheck");
     exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1");
     formulario = document.getElementById("formulario");
     
-    alert("enviando");
-    document.formulario.submit();
+    if (!inputEmail4.value) {
+        inputEmail4.focus();
+        Swal.fire({
+            title: 'Debe ingresar un email',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    }
+
+    if (validando) {
+        Swal.fire(
+            'Muy bien!',
+            'El formulario fue enviado con éxito!',
+            'success'
+          )
+        // document.formulario.submit();
+    }
+
 }
 
 function reset() {
