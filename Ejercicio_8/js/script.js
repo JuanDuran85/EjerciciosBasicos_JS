@@ -1,7 +1,8 @@
 function validar() {
     var validando = true;
-    var expresionNombre = /^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$/;
     var expresionCorreo = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    var expresionZip = /^[\d]{2,9}/;
+    var expresionCity = /^[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]/;
 
     var inputEmail4, inputPassword4, inputAddress, inputCity, inputState, gridCheck, exampleFormControlTextarea1, formulario, inputZip;
 
@@ -16,7 +17,6 @@ function validar() {
     formulario = document.getElementById("formulario");
 
     if (!inputEmail4.value) {
-        console.log("entro como vacio en correo")
         inputEmail4.focus();
         Swal.fire({
             title: 'Debe ingresar un email',
@@ -27,9 +27,17 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
+        validando = false;
+    }else if (!expresionCorreo.exec(inputEmail4.value)) {
+        inputEmail4.focus();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong with your email!',
+            footer: 'Please, check your email'
+          })
+        validando = false;
     }else if (!inputPassword4.value) {
-        console.log("entro como vacio en clave")
         inputPassword4.focus();
         Swal.fire({
             title: 'Debe ingresar un password',
@@ -40,9 +48,8 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
+        validando = false;
     } else if (!inputAddress.value) {
-        console.log("entro como vacio en direccion")
         inputAddress.focus();
         Swal.fire({
             title: 'Debe ingresar una dirección obligatoriamente',
@@ -53,9 +60,8 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
+        validando = false;
     } else if (!inputCity.value) {
-        console.log("entro como vacio en ciudad")
         inputCity.focus();
         Swal.fire({
             title: 'Debe ingresar una Ciudad obligatoriamente',
@@ -66,9 +72,17 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
+        validando = false;
+    } else if (!expresionCity.exec(inputCity.value)) {
+        inputCity.focus();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong with the City!',
+            footer: 'Please... Check the City'
+          });
+        validando = false;
     } else if (inputState.value == "Choose...") {
-        console.log("entro como vacio en el estado");
         inputState.focus();
         Swal.fire({
             title: 'Debe seleccionar cualquiera de lo estados disponibles',
@@ -79,9 +93,8 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
+        validando = false;
     } else if (!inputZip.value) {
-        console.log("entro como vacio en zip")
         inputZip.focus();
         Swal.fire({
             title: 'Debe ingresar un Código Zip valido',
@@ -92,9 +105,17 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
-    } else if (!exampleFormControlTextarea1){
-        console.log("entro como vacio en textarea")
+        validando = false;
+    } else if (!expresionZip.test(inputZip.value)) {
+        inputZip.focus();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong with the Zip Code!',
+            footer: 'Please... Check the Zip Code'
+          });
+        validando = false;
+    } else if (exampleFormControlTextarea1.value == ""){
         exampleFormControlTextarea1.focus();
         Swal.fire({
             title: 'Debe ingresar algun texto en el área indicada',
@@ -105,7 +126,19 @@ function validar() {
               popup: 'animated rollOut faster'
             }
           });
-          validando = false;
+        validando = false;
+    } else if (!gridCheck.checked) {
+        gridCheck.focus();
+        Swal.fire({
+            title: 'Seleccionar la opcion',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+        validando = false;
     }
 
     if (validando) {
