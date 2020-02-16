@@ -148,6 +148,12 @@ function validar() {
             'success'
           )
         // document.formulario.submit();
+        var elemento = document.createElement("P");
+        var texto = document.createTextNode("Agregando texto al final del formuladio despues de enviarlo");
+        elemento.appendChild(texto);
+        document.body.appendChild(elemento);
+        console.log(document.getElementsByTagName("p")[0]);
+        document.getElementsByTagName("p")[0].className += "textoNuevo";
     };
 }
 
@@ -163,6 +169,7 @@ function reset() {
     }).then((result) => {
         if (result.value) {
             document.getElementById("formulario").reset();
+            document.getElementsByTagName("p")[0].classList.remove("textoNuevo");
             Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',

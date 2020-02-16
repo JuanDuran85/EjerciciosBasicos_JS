@@ -17,4 +17,13 @@ input[type="text"] {
   input[type="text"]:focus {
     background-color: #effffa; }
 
+.textoNuevo {
+  font-size: 2em;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  color: #2431a8;
+  background-color: rosybrown;
+  border: 1px solid black; }
+
 /*# sourceMappingURL=main.css.map */

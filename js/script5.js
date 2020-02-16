@@ -7,4 +7,8 @@ function validarFormaulario() {
     let mostrar = document.getElementById("mostrar");
 
     alert("Los datos ingresados fueron: "+nombre.value+" "+apellido.value+" "+correo.value+" "+edad.value);
+    
+    mostrar.innerHTML = "<p>Los datos ingresados fueron: </p>"+nombre.value+" "+apellido.value+" "+correo.value+" "+edad.value;
+    
+    return false;
 }
