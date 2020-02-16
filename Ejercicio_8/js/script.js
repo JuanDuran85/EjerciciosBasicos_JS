@@ -14,11 +14,90 @@ function validar() {
     gridCheck = document.getElementById("gridCheck");
     exampleFormControlTextarea1 = document.getElementById("exampleFormControlTextarea1");
     formulario = document.getElementById("formulario");
-    
+
     if (!inputEmail4.value) {
+        console.log("entro como vacio en correo")
         inputEmail4.focus();
         Swal.fire({
             title: 'Debe ingresar un email',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    }else if (!inputPassword4.value) {
+        console.log("entro como vacio en clave")
+        inputPassword4.focus();
+        Swal.fire({
+            title: 'Debe ingresar un password',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    } else if (!inputAddress.value) {
+        console.log("entro como vacio en direccion")
+        inputAddress.focus();
+        Swal.fire({
+            title: 'Debe ingresar una dirección obligatoriamente',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    } else if (!inputCity.value) {
+        console.log("entro como vacio en ciudad")
+        inputCity.focus();
+        Swal.fire({
+            title: 'Debe ingresar una Ciudad obligatoriamente',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    } else if (inputState.value == "Choose...") {
+        console.log("entro como vacio en el estado");
+        inputState.focus();
+        Swal.fire({
+            title: 'Debe seleccionar cualquiera de lo estados disponibles',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    } else if (!inputZip.value) {
+        console.log("entro como vacio en zip")
+        inputZip.focus();
+        Swal.fire({
+            title: 'Debe ingresar un Código Zip valido',
+            showClass: {
+              popup: 'animated rollIn faster'
+            },
+            hideClass: {
+              popup: 'animated rollOut faster'
+            }
+          });
+          validando = false;
+    } else if (!exampleFormControlTextarea1){
+        console.log("entro como vacio en textarea")
+        exampleFormControlTextarea1.focus();
+        Swal.fire({
+            title: 'Debe ingresar algun texto en el área indicada',
             showClass: {
               popup: 'animated rollIn faster'
             },
@@ -36,8 +115,7 @@ function validar() {
             'success'
           )
         // document.formulario.submit();
-    }
-
+    };
 }
 
 function reset() {

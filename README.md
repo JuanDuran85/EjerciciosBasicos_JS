@@ -18,6 +18,7 @@ Funciones, metodos y propiedades de JavaScript utilizados en los ejemplos:
 * checked
 * addEventListener
 * submit
+* exec(): ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
 
 ## Expresiones Regulares en JavaScript
 Las expresiones regulares son patrones utilizados para encontrar una determinada combinación de caracteres dentro de una cadena de texto. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan en los métodos exec y test de RegExp.
