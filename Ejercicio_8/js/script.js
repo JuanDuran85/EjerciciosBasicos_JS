@@ -127,6 +127,15 @@ function validar() {
             }
           });
         validando = false;
+    } else if (exampleFormControlTextarea1.value.length > 20) {
+        exampleFormControlTextarea1.focus();
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'El campo de texto no puede tener mas de 20 caracteres!',
+          footer: 'Please... Check the Text Area'
+        });
+        validando = false;
     } else if (!gridCheck.checked) {
         gridCheck.focus();
         Swal.fire({
@@ -152,7 +161,6 @@ function validar() {
         var texto = document.createTextNode("Agregando texto al final del formuladio despues de enviarlo");
         elemento.appendChild(texto);
         document.body.appendChild(elemento);
-        console.log(document.getElementsByTagName("p")[0]);
         document.getElementsByTagName("p")[0].className += "textoNuevo";
     };
 }
