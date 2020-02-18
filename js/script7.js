@@ -38,3 +38,107 @@ var alumnos = alumnos.map(function (variable) {
 });
 
 console.log(alumnos);
+
+var especialidades = [
+    {
+        Radiologia: 
+        {
+            paciente1: {
+                hora: "11:00",
+                especialista: {
+                    nombre: "Ignacio",
+                    apellido: "Shoulz"
+                },
+                paciente: {
+                    nombre: "Francisca",
+                    Apellido: "Roja"
+                },
+                RUT: {
+                    numero: 32435457247,
+                },
+                prevision: {
+                    FONASA: true,
+                    ISAPRE: true
+                }
+            },
+            paciente2: {
+                hora: "11:00",
+                especialista: {
+                    nombre: "Ignacio",
+                    apellido: "Shoulz"
+                },
+                paciente: {
+                    nombre: "Francisca",
+                    Apellido: "Roja"
+                },
+                RUT: {
+                    numero: 32435457247,
+                },
+                prevision: {
+                    FONASA: true,
+                    ISAPRE: true
+                }
+            },
+            paciente3: {
+                hora: "11:00",
+                especialista: {
+                    nombre: "Ignacio",
+                    apellido: "Shoulz"
+                },
+                paciente: {
+                    nombre: "Francisca",
+                    Apellido: "Roja"
+                },
+                RUT: {
+                    numero: 32435457247,
+                },
+                prevision: {
+                    FONASA: true,
+                    ISAPRE: true
+                }
+            }
+        }
+    },
+    {
+        Traumatologia: {
+            hora: "11:00",
+            especialista: {
+                nombre: "Ignacio",
+                apellido: "Shoulz"
+            },
+            paciente: {
+                nombre: "Francisca",
+                Apellido: "Roja"
+            },
+            RUT: {
+                numero: 32435457247,
+            },
+            prevision: {
+                FONASA: true,
+                ISAPRE: true
+            }
+        }
+    },
+    {
+        Dental: {
+            hora: "11:00",
+            especialista: {
+                nombre: "Ignacio",
+                apellido: "Shoulz"
+            },
+            paciente: {
+                nombre: "Francisca",
+                Apellido: "Roja"
+            },
+            RUT: {
+                numero: 32435457247,
+            },
+            prevision: {
+                FONASA: true,
+                ISAPRE: true
+            }
+        }
+    }
+]
+
+document.getElementById("muestra1").innerHTML = especialidades[0].Radiologia.paciente1.especialista.nombre;
