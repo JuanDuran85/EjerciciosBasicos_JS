@@ -41,8 +41,6 @@ Ejemplos:
 /abc/; verifica que existan las tres letras abc en un string cualquiera. 
 /(\d{4})-(\d{2})-(\d{2})/; valida una cadena del tipo "1987-09-11".
 
-
-
 * Páginas para Consultar:
 
   * [Validaciones HTML5](https://lenguajehtml.com/p/html/formularios/validaciones-html5).
