@@ -18,4 +18,46 @@ function validarNombre () {
         alert("El nombre no puede estar vacio");
         return false;
     }
+    return true;
+}
+
+function validarTelefono() {  
+    var telefono = document.getElementById("telefono");
+    if (isNaN(telefono.value)) {
+        alert("campo telefono debe ser numerico");
+        return false;
+    }
+    return true;
+}
+
+function validaFecha() {
+    var dia = document.getElementById("dia").value;
+    var mes = document.getElementById("mes").value;
+    var ano = document.getElementById("ano").value;
+
+    var fecha = new Date(ano, mes, dia);
+    if (isNaN(fecha)) {
+        alert("Los campos de la fecha no cumpolen el formato");
+        return false;        
+    }
+    return true;
+}
+
+function validarCheck() {  
+    var mayor = document.getElementById("mayor");
+
+    if (!mayor.checked) {
+        alert("Debes ser mayor de edad");
+        return false;        
+    }
+    return true;
+}
+
+function validando(e) {
+    if (validarNombre() && validarTelefono() && validaFecha() && validarCheck() && confirm("Clic en aceptar para enviar")) {
+        return true;
+    } else {
+        e.preventDefault();
+        return false;
+    }
 }
