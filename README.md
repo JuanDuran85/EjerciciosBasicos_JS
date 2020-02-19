@@ -1,8 +1,9 @@
 # Ejercicios Basicos para JS
 
- - Ejercicios básicos de JavaSvript para el curso.
+- Ejercicios básicos de JavaSvript para el curso.
 
 Funciones, metodos y propiedades de JavaScript utilizados en los ejemplos:
+
 * document
 * windows
 * onload
@@ -14,13 +15,18 @@ Funciones, metodos y propiedades de JavaScript utilizados en los ejemplos:
 * onsubmit
 * write
 * prompt
-* preventDefault
+* preventDefault: cancela el evento si es cancelable, lo que significa que la acción predeterminada que pertenece al evento no ocurrirá.
 * checked
 * addEventListener
 * submit
 * exec(): ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+* .elements[] Devuelve un array con todos los input del formulario
+* getElementById("idElemento") Devuelve un elemento con un id determinado
+* getElementsByTagName("etiqueta") Devuelve un array con elementos de un tipo de etiqueta (input, select, entre otros.)
+* getElementsByName("nombre") Devuelve un array con elementos que tienen el mismo nombre (por ejemplo, radiobutton).
 
 ## Expresiones Regulares en JavaScript
+
 Las expresiones regulares son patrones utilizados para encontrar una determinada combinación de caracteres dentro de una cadena de texto. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan en los métodos exec y test de RegExp.
 
 Algunos significados de que se pueden encontrar en las expresiones regulares:
