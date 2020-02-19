@@ -13,13 +13,13 @@
             <tr>
                 <td>Nombre: </td>
                 <td>
-                    <input type="text" name="nombre" id="nombre" maxlength="15" title="Debes ingresar entre 2 y 15 caracteres alfabeticos" required/>
+                    <input type="text" name="nombre" id="nombre" maxlength="15" title="Debes ingresar entre 2 y 15 caracteres alfabeticos" required pattern="[A-Za-z]{2,15}"/>
                 </td>
             </tr>
             <tr>
                 <td>Edad: </td>
                 <td>
-                    <input type="number" name="edad" id="edad" required min="18" max="100" title="Debe ingresar una edad entre 18 y 100 años"/>
+                    <input type="number" name="edad" id="edad" required min="18" max="100" title="Debe ingresar una edad entre 18 y 100 años" />
                 </td>
             </tr>
             <tr>
