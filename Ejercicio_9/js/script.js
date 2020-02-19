@@ -14,8 +14,10 @@ function inicio(){
 
 function validarNombre () {  
     var nombre = document.getElementById("nombre");
+    limpiarError(nombre);
     if (nombre.value == "") {
         alert("El nombre no puede estar vacio");
+        error(nombre)
         return false;
     }
     return true;
@@ -60,4 +62,13 @@ function validando(e) {
         e.preventDefault();
         return false;
     }
+}
+
+function error(elemento) {
+    elemento.className = "error";
+    elemento.focus();
+}
+
+function limpiarError(elemento) {
+    elemento.className = "";
 }
