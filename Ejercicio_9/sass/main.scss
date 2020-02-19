@@ -1,0 +1,22 @@
+.formulario {
+    background-color: lightgoldenrodyellow;
+    width: 35%;
+    margin: 2em;
+    padding: 1.5em;
+}
+
+input {
+    padding: 1em;
+    font-size: 12px;
+}
+
+td {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+input[type="submit"], input[type="reset"] {
+    font-size: 1.5em;
+    padding: 1em;
+    margin: 1em;
+}
