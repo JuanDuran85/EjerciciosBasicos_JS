@@ -23,6 +23,17 @@ function validarNombre () {
     return true;
 }
 
+function validarEdad () {  
+    var edad = document.getElementById("edad");
+    limpiarError(edad);
+    if (edad.value == "") {
+        alert("La edad no puede estar vacia");
+        error(edad)
+        return false;
+    }
+    return true;
+}
+
 function validarTelefono() {  
     var telefono = document.getElementById("telefono");
     if (isNaN(telefono.value)) {
@@ -56,7 +67,7 @@ function validarCheck() {
 }
 
 function validando(e) {
-    if (validarNombre() && validarTelefono() && validaFecha() && validarCheck() && confirm("Clic en aceptar para enviar")) {
+    if (validarNombre() && validarTelefono() && validaFecha() && validarCheck() && validarEdad() && confirm("Clic en aceptar para enviar")) {
         return true;
     } else {
         e.preventDefault();
