@@ -31,8 +31,23 @@ function cambia_Texto() {
 
     //El método querySelector devuelve el primer elemento que coincide con un selector CSS especificado en el documento.
     document.querySelector("p").style.backgroundColor = "green";
+
+    //El método querySelectorAll devuelve un arreglo de elemento que coincide con un selector CSS especificado en el documento.
     console.log(document.querySelectorAll("p.otra_clase"));
     document.querySelectorAll("p.otra_clase")[1].style.fontSize = 20+"px";
     document.querySelectorAll("p.otra_clase")[1].innerHTML = "Nuevo texto Modificado con querySelectorAll";
     
+}
+
+function cambiar_Clase() {
+    document.getElementById("entrada1").setAttribute("class","clase_nueva");
+    document.getElementById("entrada2").className = "clase_nueva";
+}
+
+function quitar_Clase() {
+    document.getElementById("p3").setAttribute("class","");
+    document.getElementById("p4").className = "";
+    for (let index = 0; index < document.getElementsByTagName("input").length; index++) {
+        document.getElementsByTagName("input")[index].className = "";
+    }
 }
