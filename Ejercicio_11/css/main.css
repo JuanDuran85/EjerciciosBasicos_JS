@@ -1,0 +1,17 @@
+.parrafo {
+    font-size: 2em;
+    font-weight: 700;
+    color: blue;
+    background-color: bisque;
+}
+
+button {
+    margin: 1em;
+    padding: 1em;
+    font-size: 1em;
+    background-color: coral;
+}
+
+input {
+    font-size: 1.2em;
+}
