@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos DOM</title>
+    <style>
+        .fondo {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <section id="mostrar"></section>
+    <p id="parrafo">Hola a todos</p>
+    <p id="parrafo2">Hola a todos</p>
+    <button id="boton">Boton</button>
+    <input type="text" value="Nombre de usuario" id="cambiar">
+    <script>
+        var parrafo2 = document.getElementById("parrafo2");
+        console.log(parrafo2);
+        parrafo2.innerHTML = "Soy un parrafo";
+        
+        console.log(document.getElementById("boton"));
+        document.getElementById("boton").value = "Boton2";
+        document.getElementById("boton").innerHTML = "Boton2";
+        document.getElementById("boton").id = "boton2";
+
+        document.getElementById("cambiar").value = document.getElementById("parrafo").innerHTML;
+        document.getElementById("cambiar").setAttribute("class","fondo");
+
+        var mostrar = document.getElementById("mostrar");
+        var parrafo3 = document.createElement("p");
+        parrafo3.innerHTML = "parrafo creado desde javascript";
+        mostrar.appendChild(parrafo3);
+    </script>
+</body>
+</html>
