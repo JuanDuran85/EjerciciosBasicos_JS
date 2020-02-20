@@ -16,7 +16,24 @@
     <p id="parrafo2">Hola a todos</p>
     <button id="boton">Boton</button>
     <input type="text" value="Nombre de usuario" id="cambiar">
+    <input type="text" name="animal" id="animal" value="a b c">
+    <input type="button" id="btnValidar" value="Validar" onclick="validarTexto()">
+
     <script>
+        
+        function validarTexto() {  
+            const animal = document.getElementById("animal").value;
+            const patron = /[^abc]/igm;
+            if (animal.match(patron)) {
+                console.log(animal.match(patron))
+                alert("gato");
+            }else{
+                alert("no es gato");
+                console.log(animal.match(patron))
+            }
+
+        }
+        
         var parrafo2 = document.getElementById("parrafo2");
         console.log(parrafo2);
         parrafo2.innerHTML = "Soy un parrafo";

@@ -22,9 +22,9 @@ function cear_imagen() {
     var direccion = prompt("Por favor ingrese la URL de la imagen que desea agregar", "http://www.domino.com/imagen.jpg");
     imagen_nueva.setAttribute("src",direccion);
     imagen_nueva.setAttribute("class","img_nueva");
+    imagen_nueva.setAttribute("alt",prompt("Por favor ingrese el texto alternativo de la imagen","Imagen nueva de ejemplo"));
     var mostrar = document.getElementById("mostrar");
     mostrar.appendChild(imagen_nueva);
-    imagen_nueva.setAttribute("alt",prompt("Por favor ingrese el texto alternativo de la imagen","Imagen nueva de ejemplo"));
 }
 
 function borrar_ultimo() {  
