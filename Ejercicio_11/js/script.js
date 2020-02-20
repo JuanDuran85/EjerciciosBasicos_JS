@@ -52,4 +52,7 @@ function quitar_Clase() {
     for (let index = 0; index < document.getElementsByTagName("input").length; index++) {
         document.getElementsByTagName("input")[index].className = "";
     }
+
+    //Eliminando una clase en especifico.
+    document.getElementById("p2").classList.remove('clase3');
 }
