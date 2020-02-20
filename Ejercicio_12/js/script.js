@@ -5,7 +5,6 @@ function iniciando() {
     document.getElementById("cear_imagen").addEventListener("click",cear_imagen);
     document.getElementById("borrar_ultimo").addEventListener("click",borrar_ultimo);
     document.getElementById("borrar_primero").addEventListener("click",borrar_primero);
-    document.getElementById("sustituir").addEventListener("click",sustituir);
 }
 
 function crear_parrafo() {  
@@ -26,4 +25,16 @@ function cear_imagen() {
     var mostrar = document.getElementById("mostrar");
     mostrar.appendChild(imagen_nueva);
     imagen_nueva.setAttribute("alt",prompt("Por favor ingrese el texto alternativo de la imagen","Imagen nueva de ejemplo"));
+}
+
+function borrar_ultimo() {  
+    var mostrar = document.getElementById("mostrar");
+    var ultimo_hijo = mostrar.lastChild;
+    mostrar.removeChild(ultimo_hijo);
+}
+
+function borrar_primero() {  
+    var mostrar = document.getElementById("mostrar");
+    var primer_hijo = mostrar.firstChild;
+    mostrar.removeChild(primer_hijo);
 }
