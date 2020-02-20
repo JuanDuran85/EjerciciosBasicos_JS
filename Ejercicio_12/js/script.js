@@ -17,3 +17,13 @@ function crear_parrafo() {
     var mostrar = document.getElementById("mostrar");
     mostrar.appendChild(parrafo_nuevo);
 }
+
+function cear_imagen() {  
+    var imagen_nueva = document.createElement("img");
+    var direccion = prompt("Por favor ingrese la URL de la imagen que desea agregar", "http://www.domino.com/imagen.jpg");
+    imagen_nueva.setAttribute("src",direccion);
+    imagen_nueva.setAttribute("class","img_nueva");
+    var mostrar = document.getElementById("mostrar");
+    mostrar.appendChild(imagen_nueva);
+    imagen_nueva.setAttribute("alt",prompt("Por favor ingrese el texto alternativo de la imagen","Imagen nueva de ejemplo"));
+}
