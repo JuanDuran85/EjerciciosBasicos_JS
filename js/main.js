@@ -84,18 +84,61 @@ function saludo() {
 
 // ----------------------------------------------------------//
 
-var numero2 = document.getElementById("numero").value;
+
 
 var boton = document.getElementById("validar");
+var mensaje = document.getElementById("mensaje");
+
 boton.addEventListener("click", validar);
 
 function validar() {
-     console.log(numero2);
+    var numero2 = document.getElementById("numero").value;
+    var conteo = 0;
+    if (numero2 >=1 && numero2<=10) {
+        mensaje.setAttribute("class","correcto");
+        for (let index = 1; index <= numero2; index++) {
+            console.log("numero correcto");
+            mensaje.innerHTML = "<br>numero correcto"+index;
+        }
+        do {
+            conteo++;
+            console.log(conteo);
+        } while (conteo <= numero2);
+        console.log("salido del do-while")
+    }else if(numero2 == ""){
+        mensaje.innerHTML = "Campo sin valor";
+        mensaje.setAttribute("class","incorrecto");
+    } else {
+        mensaje.innerHTML = "numero incorrecto";
+        mensaje.setAttribute("class","incorrecto");
+    }
 }
 
-
-
-
+document.getElementById("cuadrado").addEventListener("click", function () {  
+    var cuadrado2;
+    var numero2 = prompt("ingrese un numero del 1 al 10");
+    console.log(typeof(numero2));
+    switch (numero2) {
+        case "1":
+            cuadrado2= numero2;
+            console.log("Ingreso el numero 1");
+            mensaje.innerHTML = "Ingreso el numero 1";  
+            break;
+        case "2":
+            cuadrado2= Math.pow(numero2,2);
+            console.log("Ingreso el numero 2, el cuadrado es: "+cuadrado2);
+            mensaje.innerHTML = "Ingreso el numero 2, el cuadrado es: "+cuadrado2;
+            break;    
+        case "3":
+            cuadrado2= Math.pow(numero2,3);
+            mensaje.innerHTML = `Ingreso el numero ${numero2} y su potencia al cubo es: ${cuadrado2}`;
+            break;  
+        default:
+            console.log("Ingreso otro numero distinto a 1, 2 y 3");
+            mensaje.innerHTML = "Ingreso otro numero distinto a 1, 2 y 3";
+            break;
+    }
+});
 
 
 
