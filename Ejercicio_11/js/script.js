@@ -46,8 +46,13 @@ function cambiar_Clase() {
 
 function quitar_Clase() {
     document.getElementById("p3").setAttribute("class","");
+    
     document.getElementById("p4").className = "";
+    
     for (let index = 0; index < document.getElementsByTagName("input").length; index++) {
         document.getElementsByTagName("input")[index].className = "";
     }
+
+    //Eliminando una clase en especifico.
+    document.getElementById("p2").classList.remove('clase3');
 }

@@ -1,0 +1,36 @@
+section {
+    margin: 1.5em;
+    font-size: 1em;
+    padding: 1.1em;
+    text-transform: uppercase;
+    background-color: beige;
+    border: 1px dashed black;
+}
+
+textarea {
+    margin: 1.5em;
+    font-size: 1em;
+    padding: 2em;
+}
+
+button {
+    display: block;
+    background-color: blueviolet;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.nueva_clase {
+    font-size: 1.6em;
+    color: rgb(41, 40, 33);
+    transition: background-color 1.5s ease-in-out;
+}
+
+.nueva_clase:hover {
+    background-color: rgb(235, 18, 18);
+}
+
+.img_nueva {
+    width: 55%;
+    height: 50vh;
+}
